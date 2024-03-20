@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔍</text></svg>">
+    <title>Message Encryptor</title>
+    <link rel="stylesheet" href="reset-style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- text area section -->
+      <section class="leftSection">
+        <img src="images/logo-alura.png" alt="logo alura basic" />
+        <textarea
+          name="message"
+          id="message"
+          cols="60"
+          rows="10"
+          placeholder="your message goes here..."
+        ></textarea>
+        <small
+          >&#x24D8;Please, enter only lowercase letters and no special
+          characters.</small
+        >
+        <div class="buttonsArea">
+          <button class="cryptButton" type="button" onclick="encryptMessage();">
+            Crypt
+          </button>
+          <button
+            class="decryptButton"
+            type="button"
+            onclick="decryptMessage();"
+          >
+            Decrypt
+          </button>
+        </div>
+      </section>
+
+      <!-- coded/decoded area section -->
+      <section class="rightSection">
+        <div id="mensajeRespuesta">
+
+          
+          <div id="tempMessage">
+            <img src="images/avatar.png" alt="avatar image" />
+            <h2>No message was found.</h2>
+            <p>Enter the text you want to encrypt or decrypt.</p>
+          </div>
+
+
+
+          <div id="newMessage" style="display: none;">
+            <p id="txtMessage"></p>
+            <button
+            id="copyMessage"
+            class="copyMessage"
+            type="button"
+            onclick="copyText();"
+          >
+            Copy message
+          </button>
+          </div>
+
+
+        </div>
+      </section>
+    </main>
+    <footer>Developed with 💙 by &#9426; <a href="https://github.com/odnxmrx" target="_blank">Armando Gama</a> - 2024</footer>
+  </body>
+</html>
